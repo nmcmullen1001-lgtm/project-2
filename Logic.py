@@ -259,8 +259,6 @@ class Logic(QMainWindow, Ui_mainWindow):
                 content = csv.writer(GPA)
                 content.writerow([name, s1, s2, s3, s4, e, grade])
 
-
-
             txt:str = f' {name} your score is {avg:.2f} % which is a(n) {grade}'
 
             self.error.setText(txt)

@@ -1,5 +1,6 @@
 from PyQt6.QtWidgets import QApplication
 
+
 from Logic import *
 
 def main():
