@@ -3,7 +3,7 @@ from PyQt6.QtWidgets import QMainWindow
 from GUI import *
 
 class Logic(QMainWindow, Ui_mainWindow):
-    def __init__(self):
+    def __init__(self) -> None:
         """
         This function hides the scores and their labels, creates the self.check variable, and guides what happens when
         a button is pressed!
@@ -39,7 +39,7 @@ class Logic(QMainWindow, Ui_mainWindow):
         self.radio_4.clicked.connect(lambda : self.radio4())
         self.Submit.clicked.connect(lambda : self.submit())
 
-    def radio1(self):
+    def radio1(self) -> None:
         """
         This function changes the self.check value, shows the first score box, hides the rest,
         clears the inputs in score box 1, and sets the text for scores 2 - 4 as N/A.
@@ -63,7 +63,7 @@ class Logic(QMainWindow, Ui_mainWindow):
         self.Score_3.setText('N/A')
         self.Score_4.setText('N/A')
 
-    def radio2(self):
+    def radio2(self) -> None:
         """
          This function changes the self.check value, shows the first two score boxes, hides the rest,
         clears the inputs in both scores 1 and 2, and sets the text for scores 3 and 4 as N/A.
@@ -86,7 +86,7 @@ class Logic(QMainWindow, Ui_mainWindow):
         self.Score_3.setText('N/A')
         self.Score_4.setText('N/A')
 
-    def radio3(self):
+    def radio3(self) -> None:
         """
         This function changes the self.check value, shows three score boxes, hides the fourth,
         clears the inputs in score boxes 1 - 3, and sets the text for score 4 as N/A
@@ -108,7 +108,7 @@ class Logic(QMainWindow, Ui_mainWindow):
         self.Score_3.setText('')
         self.Score_4.setText('N/A')
 
-    def radio4(self):
+    def radio4(self) -> None:
         """
          This function changes the self.check value, shows all score boxes,
             and clears all the inputs in the score boxes
@@ -132,7 +132,7 @@ class Logic(QMainWindow, Ui_mainWindow):
         self.Score_4.setText('')
 
 
-    def submit(self):
+    def submit(self) -> None:
         """
         This function converts the data in the student name box into a variable as a string,
         checks if there is nothing the SyntaxError is raised, it then gets checked by the .isalpha(), if it returns
